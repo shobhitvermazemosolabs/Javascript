@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Take Orders</title>
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/mdb.lite.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="tables">
+        <div class="heading">
+            <h4>Tables</h4>
+        </div>
+        <div class="search" id="tables-search">
+            <form class="form-inline d-flex justify-content-center md-form form-sm">
+                <input class="form-control form-control-sm mr-3 w-100" type="text" placeholder="Search table"
+                    aria-label="Search" id="tables-search-input" onkeyup="processSearchTable()">
+            </form>
+        </div>
+        <div id="tables-list" class="scroll">
+            <!--
+            <div table-id="id-value" class="table-container shadow-sm p-3 mb-2 bg-white rounded">
+                <div class="table-heading">
+                    <h7>Table name</h7>
+                </div>
+                <div class="table-details">
+                    <p>Rs: (cost)|Total items: (count)</p>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </div>
+    <div id="menu">
+        <div class="heading">
+            <h4>Menu</h4>
+        </div>
+        <div class="search" id="menu-search">
+            <form class="form-inline d-flex justify-content-center md-form form-sm">
+                <input class="form-control form-control-sm mr-3 w-100" type="text"
+                    placeholder="Search by course, by food" aria-label="Search" id="menu-search-input"
+                    onkeyup="processSearchMenu()">
+            </form>
+        </div>
+        <div id="menu-list" class="scroll">
+            <!--
+            <div menu-id='id' draggable="true" class="menu-container shadow-sm p-2 mb-2 bg-white rounded">
+                <div class="menu-heading">
+                    <h6>Item name</h6>
+                </div>
+                <div class="menu-details">
+                    <p>(cost)</p>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+    <div class="table-view">
+        <div class="table-content">
+            <div class="table-header">
+                <span class="close" onclick="closeTableView()">&times;</span>
+                <h6><span id="table-name">Table Name</span> | Order Details</h6>
+            </div>
+            <div class="menu-items scroll">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-list">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <h7>Total: Rs <span id="total-amount">0</span></h7>
+            <span id="generate-bill"></span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="data.js"></script>
+    <script>
+        initMenu();
+        initTables();
+    </script>
+</body>

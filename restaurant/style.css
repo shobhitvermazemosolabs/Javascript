@@ -1,0 +1,162 @@
+/*----------------------------------------*/
+/* BASIC SETUP */
+/*----------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2% 2% 0 8%;
+    background-color: rgb(180, 180, 180, .2);
+}
+
+/*----------------------------------------*/
+/* COMMON */
+/*----------------------------------------*/
+
+
+p {
+    font-size: 70%;
+    color: rgb(50, 50, 50, .7);
+}
+
+#tables-list,
+#menu-list {
+    height: 70vh;
+    padding-right: 6px;
+    overflow-y: scroll;
+}
+
+.menu-heading,
+.table-heading {
+    text-transform: capitalize;
+}
+
+/*----------------------------------------*/
+/* TABLES */
+/*----------------------------------------*/
+
+#tables {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+thead,tbody{
+    text-align: center;
+}
+
+.table-container:nth-child(odd) {
+    background-color: rgb(50, 50, 50, .7);
+}
+
+.table-container {
+    padding: 8px 0 .1px 12px;
+    cursor: pointer;
+}
+
+#table-name {
+    text-transform: capitalize;
+}
+
+.table-view {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 10vh;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.table-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1000px;
+    border-radius: 8px;
+    padding-bottom: 70px;
+    max-height: 80vh;
+}
+
+.menu-items{
+    min-height: 20vh;
+    max-height: 60vh;
+    margin: 20px 0;
+    padding-right: 15px;
+}
+
+.scroll{
+    overflow-y: scroll;
+}
+
+ .scroll::-webkit-scrollbar {
+     width: 5px;
+ }
+ 
+ 
+ .scroll::-webkit-scrollbar-thumb {
+     border-radius: 10px;
+     box-shadow: inset 0 0 5px grey;
+ }
+ ​
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.safari-only{
+    margin: 0 auto;
+}
+
+td {
+    text-transform: capitalize;
+}
+
+button {
+    float: right;
+}
+
+img{
+    cursor: pointer;
+}
+
+.table-content h7{
+    padding-left: 280px;
+}
+
+
+/*----------------------------------------*/
+/* MENU */
+/*----------------------------------------*/
+
+#menu {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+.menu-container {
+    padding: 8px 0 4px 18px;
+}
